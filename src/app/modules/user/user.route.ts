@@ -9,5 +9,6 @@ userRouter.post(
   validateRequest(UserValidationSchema.createUserZodValidateSchema),
   UserController.createUser
 );
+userRouter.get('/', UserController.getAllUser);
 
 export const UserRouter = userRouter;
