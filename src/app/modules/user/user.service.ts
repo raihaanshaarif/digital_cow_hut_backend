@@ -14,9 +14,17 @@ const getSingleUser = async (id: string): Promise<IUser | null> => {
   const result = await User.findById(id);
   return result;
 };
+const update = async (
+  id: string,
+  data: Partial<IUser>
+): Promise<IUser | null> => {
+  const result = await User.findOneAndUpdate({ _id: id }, data, { new: true });
+  return result;
+};
 
 export const UserService = {
   createUser,
   getAllUser,
   getSingleUser,
+  update,
 };

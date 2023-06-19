@@ -1,51 +1,74 @@
 import { z } from 'zod';
-import { userRoles } from './user.constant';
 
-const createUserZodValidateSchema = z.object({
+const createUserZodSchema = z.object({
   body: z.object({
-    phoneNumber: z.string({
-      required_error: 'phoneNumber is required',
-    }),
-    role: z.enum([...userRoles] as [string, ...string[]], {
-      required_error: 'role is required',
-    }),
     password: z.string({
-      required_error: 'password is required',
+      required_error: 'password is required!',
     }),
     name: z.object({
       firstName: z.string({
-        required_error: 'firstName is required',
+        required_error: 'First name is required',
       }),
       lastName: z.string({
-        required_error: 'lastName is required',
+        required_error: 'Last name is required',
       }),
     }),
-    address: z.string({
-      required_error: 'address is required',
+    phoneNumber: z.string({
+      required_error: 'phone number is required!',
     }),
-    budget: z.number().optional(),
+    role: z.string({
+      required_error: 'role is required!',
+    }),
+    address: z.string({
+      required_error: 'address is required!',
+    }),
     income: z.number().optional(),
+    budget: z.number().optional(),
   }),
 });
 
-const updateZodValidateSchema = z.object({
+const updateUserZodSchema = z.object({
   body: z.object({
-    phoneNumber: z.string().optional(),
-    role: z.enum([...userRoles] as [string, ...string[]]).optional(),
-    password: z.string().optional(),
-    name: z
-      .object({
-        firstName: z.string().optional(),
-        lastName: z.string().optional(),
+    password: z
+      .string({
+        required_error: 'password is required!',
       })
       .optional(),
-    address: z.string().optional(),
-    budget: z.number().optional(),
+    name: z
+      .object({
+        firstName: z
+          .string({
+            required_error: 'First name is required',
+          })
+          .optional(),
+        lastName: z
+          .string({
+            required_error: 'Last name is required',
+          })
+          .optional(),
+      })
+      .optional(),
+    phoneNumber: z
+      .string({
+        required_error: 'phone number is required!',
+      })
+      .optional(),
+    role: z
+      .string({
+        required_error: 'role is required!',
+      })
+      .optional(),
+    address: z
+      .string({
+        required_error: 'address is required!',
+      })
+      .optional(),
     income: z.number().optional(),
+    budget: z.number().optional(),
   }),
 });
 
-export const UserValidationSchema = {
-  createUserZodValidateSchema,
-  updateZodValidateSchema,
+export const UserValidation = {
+  createUserZodSchema,
+  updateUserZodSchema,
 };
