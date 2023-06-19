@@ -1,20 +1,25 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\.177245273aef2e79ef27d02176e3664ec06a5603-audit.json",
-  "files": [
-    {
-      "date": 1687177448961,
-      "name": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\phu-2023-19-06-18-error.log",
-      "hash": "a6f8bb3431bdeba633e4af871ccc6fa5da9dbc6ea6a8f9b5d1a804138e9564b2"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1687180612971,
-      "name": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\phu-2023-19-06-19-error.log",
-      "hash": "bb7dad187d2ab740c98781870208ab51b6d23405db91bd00f3278a339ef250b8"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\.177245273aef2e79ef27d02176e3664ec06a5603-audit.json",
+    "files": [
+        {
+            "date": 1687177448961,
+            "name": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\phu-2023-19-06-18-error.log",
+            "hash": "a6f8bb3431bdeba633e4af871ccc6fa5da9dbc6ea6a8f9b5d1a804138e9564b2"
+        },
+        {
+            "date": 1687180612971,
+            "name": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\phu-2023-19-06-19-error.log",
+            "hash": "bb7dad187d2ab740c98781870208ab51b6d23405db91bd00f3278a339ef250b8"
+        },
+        {
+            "date": 1687183241143,
+            "name": "G:\\@Phero 2023\\Project\\Online Cow Selling Backend for Eid Ul Adha\\logs\\winston\\errors\\phu-2023-19-06-20-error.log",
+            "hash": "72bb71182565ca6976c469f915139087b8c96cbe1753d0aba933be7d1086161f"
+        }
+    ],
+    "hashType": "sha256"
 }
