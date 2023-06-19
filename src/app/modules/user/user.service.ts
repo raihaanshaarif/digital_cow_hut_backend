@@ -21,10 +21,15 @@ const update = async (
   const result = await User.findOneAndUpdate({ _id: id }, data, { new: true });
   return result;
 };
+const deleteUser = async (id: string): Promise<IUser | null> => {
+  const result = await User.findByIdAndDelete(id);
+  return result;
+};
 
 export const UserService = {
   createUser,
   getAllUser,
   getSingleUser,
   update,
+  deleteUser,
 };

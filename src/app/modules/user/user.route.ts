@@ -15,6 +15,7 @@ userRouter.patch(
   validateRequest(UserValidation.updateUserZodSchema),
   UserController.updateUser
 );
+userRouter.delete('/:id', UserController.deleteUser);
 userRouter.get('/', UserController.getAllUser);
 
 export const UserRouter = userRouter;
